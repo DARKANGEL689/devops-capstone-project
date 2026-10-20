@@ -1,0 +1,35 @@
+$ kubectl describe deployment accounts
+
+Name:                   accounts
+Namespace:              default
+CreationTimestamp:      Wed, 20 Oct 2026 18:00:00 +0000
+Labels:                 app=accounts
+Selector:               app=accounts
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=accounts
+  Containers:
+   accounts:
+    Image:        accounts:latest
+    Port:         8080/TCP
+    Host Port:    0/TCP
+    Environment:
+      DATABASE_HOST:      postgresql
+      DATABASE_NAME:      <set to the key 'database-name' in secret 'postgresql'>
+      DATABASE_PASSWORD:  <set to the key 'database-password' in secret 'postgresql'>
+      DATABASE_USER:      <set to the key 'database-user' in secret 'postgresql'>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   accounts-7bfbc7f748 (3/3 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  5m20s  deployment-controller  Scaled up replica set accounts-7bfbc7f748 to 3

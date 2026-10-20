@@ -1,0 +1,43 @@
+[init : remove] Removing all files from /workspace/source ...
+[init : remove] Removing all files from /workspace/source done
+
+[clone : clone] Cloning into '/workspace/source'...
+[clone : clone] HEAD is now at 14b5741 Add flask-talisman and Flask-Cors dependencies
+
+[lint : flake8] flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+[lint : flake8] 0
+[lint : flake8] flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+[lint : flake8] 0
+
+[tests : nosetests] nosetests -v --with-spec --spec-color
+[tests : nosetests] test_create_account (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_health (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_index (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_bad_request (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_unsupported_media_type (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_read_account (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_list_all_accounts (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_update_account (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_delete_account (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_security_headers (test_routes.TestAccountService) ... ok
+[tests : nosetests] test_cors_security (test_routes.TestAccountService) ... ok
+[tests : nosetests] ----------------------------------------------------------------------
+[tests : nosetests] Ran 25 tests in 1.452s
+[tests : nosetests] 
+[tests : nosetests] OK
+
+[build-image : build] STEP 1: FROM python:3.9-slim
+[build-image : build] STEP 2: WORKDIR /app
+[build-image : build] STEP 3: COPY requirements.txt .
+[build-image : build] STEP 4: RUN pip install --no-cache-dir -r requirements.txt
+[build-image : build] STEP 5: COPY . .
+[build-image : build] STEP 6: CMD ["gunicorn", "--bind", "0.0.0.0:8080", "service:app"]
+[build-image : build] STEP 7: COMMIT image-registry.openshift-image-registry.svc:5000/sn-labs-darkangel689/accounts:latest
+[build-image : build] Pushing image image-registry.openshift-image-registry.svc:5000/sn-labs-darkangel689/accounts:latest...
+[build-image : build] Successfully pushed image image-registry.openshift-image-registry.svc:5000/sn-labs-darkangel689/accounts:latest
+
+[deploy : deploy] Applying deployment configuration...
+[deploy : deploy] deployment.apps/accounts configured
+[deploy : deploy] service/accounts configured
+[deploy : deploy] route.route.openshift.io/accounts configured
+[deploy : deploy] Successfully deployed accounts microservice to OpenShift.

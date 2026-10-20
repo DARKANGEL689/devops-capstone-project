@@ -1,0 +1,47 @@
+nosetests -v --with-spec --spec-color
+
+Account API Service Test Suite
+- It should get 200_OK from the Home Page
+- It should be healthy
+- It should Create a new Account
+- It should Read an Account
+- It should List all Accounts
+- It should Update an Account
+- It should Delete an Account
+- It should not Create an Account when sending the wrong data
+- It should not Create an Account when sending the wrong media type
+- It should return a CORS header
+- It should return security headers
+
+Test Cases for Account Model
+- It should Create an Account and assert that it exists
+- It should Create an account and add it to the database
+- It should Read an account
+- It should Update an account
+- It should Delete an account from the database
+- It should List all Accounts in the database
+- It should Find an Account by name
+- It should Serialize an account
+- It should Deserialize an account
+- It should not Deserialize an account with a KeyError
+- It should not Deserialize an account with a TypeError
+
+Test Flask CLI Commands
+- It should call the db-create command
+
+Name                               Stmts   Miss  Cover   Missing
+----------------------------------------------------------------
+service/__init__.py                   21      0   100%
+service/common/cli_commands.py        11      0   100%
+service/common/error_handlers.py      31      0   100%
+service/common/log_handlers.py        11      0   100%
+service/common/status.py              46      0   100%
+service/config.py                      8      0   100%
+service/models.py                     73      0   100%
+service/routes.py                     55      0   100%
+----------------------------------------------------------------
+TOTAL                                256      0   100%
+----------------------------------------------------------------------
+Ran 25 tests in 1.452s
+
+OK

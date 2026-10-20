@@ -1,0 +1,6 @@
+$ docker images
+
+REPOSITORY                                 TAG       IMAGE ID       CREATED         SIZE
+accounts                                   latest    a1b2c3d4e5f6   2 hours ago     165MB
+python                                     3.9-slim  9f8e7d6c5b4a   2 weeks ago     125MB
+postgres                                   alpine    3f4e5d6c7b8a   3 weeks ago     240MB
