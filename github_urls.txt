@@ -1,0 +1,20 @@
+# Public GitHub URLs for DevOps Capstone Submission
+# Replace the placeholder URL with your actual public GitHub URL
+
+# 1. README.md with build badge
+https://github.com/DARKANGEL689/<repo-name>/blob/main/README.md
+
+# 2. user-story.md template
+https://github.com/DARKANGEL689/<repo-name>/blob/main/.github/ISSUE_TEMPLATE/user-story.md
+
+# 3. setup.cfg file
+https://github.com/DARKANGEL689/<repo-name>/blob/main/setup.cfg
+
+# 4. ci-build.yaml workflow file
+https://github.com/DARKANGEL689/<repo-name>/blob/main/.github/workflows/ci-build.yaml
+
+# 5. init.py / __init__.py file with security headers
+https://github.com/DARKANGEL689/<repo-name>/blob/main/service/__init__.py
+
+# 6. Dockerfile
+https://github.com/DARKANGEL689/<repo-name>/blob/main/Dockerfile
