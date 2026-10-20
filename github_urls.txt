@@ -1,20 +1,20 @@
-# Public GitHub URLs for DevOps Capstone Submission
-# Replace the placeholder URL with your actual public GitHub URL
+# Public GitHub URLs for Option 1: AI Graded Submission
+# Repository: https://github.com/DARKANGEL689/devops-capstone-project
 
-# 1. README.md with build badge
-https://github.com/DARKANGEL689/<repo-name>/blob/main/README.md
+# 1. README.md file URL (containing project name and CI build badge) [2 points]
+https://github.com/DARKANGEL689/devops-capstone-project/blob/main/README.md
 
-# 2. user-story.md template
-https://github.com/DARKANGEL689/<repo-name>/blob/main/.github/ISSUE_TEMPLATE/user-story.md
+# 2. user-story.md file URL (containing the user story template) [1 point]
+https://github.com/DARKANGEL689/devops-capstone-project/blob/main/.github/ISSUE_TEMPLATE/user-story.md
 
-# 3. setup.cfg file
-https://github.com/DARKANGEL689/<repo-name>/blob/main/setup.cfg
+# 3. setup.cfg file URL (nosetests, coverage, Flake8, and Pylint configuration) [1 point]
+https://github.com/DARKANGEL689/devops-capstone-project/blob/main/setup.cfg
 
-# 4. ci-build.yaml workflow file
-https://github.com/DARKANGEL689/<repo-name>/blob/main/.github/workflows/ci-build.yaml
+# 4. ci-build.yaml file URL (CI pipeline configuration) [4 points]
+https://github.com/DARKANGEL689/devops-capstone-project/blob/main/.github/workflows/ci-build.yaml
 
-# 5. init.py / __init__.py file with security headers
-https://github.com/DARKANGEL689/<repo-name>/blob/main/service/__init__.py
+# 5. init.py / __init__.py file URL (Talisman security headers & CORS) [1 point]
+https://github.com/DARKANGEL689/devops-capstone-project/blob/main/service/__init__.py
 
-# 6. Dockerfile
-https://github.com/DARKANGEL689/<repo-name>/blob/main/Dockerfile
+# 6. Dockerfile URL (complete Docker configuration) [2 points]
+https://github.com/DARKANGEL689/devops-capstone-project/blob/main/Dockerfile
